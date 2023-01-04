@@ -50,7 +50,7 @@ CREATE TABLE question_likes (
     id INTEGER PRIMARY KEY,
     question_id INTEGER NOT NULL,
     user_id INTEGER NOT NULL,
-    liked INTEGER,
+    
     
     
     FOREIGN KEY (question_id) REFERENCES questions(id),
@@ -82,7 +82,7 @@ VALUES
     (2, 1, 2, 'reply 2');
 
 INSERT INTO
-    question_likes (question_id, user_id, liked)
+    question_likes (question_id, user_id)
 VALUES 
-    (1, 2, 1),
-    (2, 1, 2);
+    (1, 2),
+    (2, 1);
